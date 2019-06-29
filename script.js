@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // Timer
 
-    let deadline = '2019-06-28';
+    let deadline = '2030-06-28';
 
     function getTimeRemaining(endtime){
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -88,4 +88,33 @@ window.addEventListener('DOMContentLoaded', function(){
 
     setClock('timer', deadline);
 
+    // Modal
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close'),
+        podrobnee = document.querySelectorAll(".description-btn");
+
+    more.addEventListener('click', function(){
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function() {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+    for(let i = 0;i < podrobnee.length;i++){
+        podrobnee[i].addEventListener('click', function(){
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+        });
+
+    }
+    
+    
+    
 });
