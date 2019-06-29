@@ -36,6 +36,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
     }); 
 
+  
+
     // Timer
 
     let deadline = '2030-06-28';
@@ -70,13 +72,13 @@ window.addEventListener('DOMContentLoaded', function(){
             seconds.textContent = t.seconds;
 
             if(t.hours <10){
-                hours.textContent = '0' +t.hours;
+                hours.textContent = `0${t.hours}`;
             }
             if(t.minutes <10){
-                minutes.textContent = '0' +t.minutes;
+                minutes.textContent = `0${t.minutes}`;
             }
             if(t.seconds <10){
-                seconds.textContent = '0' +t.seconds;
+                seconds.textContent = `0${t.seconds}`;
             }
             
 
@@ -95,12 +97,12 @@ window.addEventListener('DOMContentLoaded', function(){
         close = document.querySelector('.popup-close'),
         podrobnee = document.querySelectorAll(".description-btn");
 
-    more.addEventListener('click', function(){
-        overlay.style.display = 'block';
-        this.classList.add('more-splash');
-        document.body.style.overflow = 'hidden';
-    });
-
+        more.addEventListener('click', function(){
+            overlay.style.display = 'block';
+            this.classList.add('more-splash');
+            document.body.style.overflow = 'hidden';
+        });
+        
     close.addEventListener('click', function() {
         overlay.style.display = 'none';
         more.classList.remove('more-splash');
