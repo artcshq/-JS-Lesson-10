@@ -88,6 +88,10 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    function addZero(n){
+       return (parseInt(n, 10) <10 ? '0' : '') + n;
+    }
+
     setClock('timer', deadline);
 
     // Modal
@@ -165,7 +169,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     });
 
-    
+    console.log(54);
 
     // let contactForm = document.querySelector("#form"),
     //     contactFormInput = contactForm.getElementsByTagName('input'),
@@ -210,3 +214,6 @@ window.addEventListener('DOMContentLoaded', function(){
     
        
 });
+
+
+localStorage.setItem('name', '1');
